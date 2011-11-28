@@ -7,6 +7,8 @@ Ticketee::Application.routes.draw do
   resources :projects do
     resources :tickets
   end
+  
+  default_url_options :host => "example.com"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
