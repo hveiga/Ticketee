@@ -1,5 +1,4 @@
 Ticketee::Application.routes.draw do
-  
   devise_for :users
 
   root :to => "projects#index"
@@ -9,6 +8,11 @@ Ticketee::Application.routes.draw do
   end
   
   default_url_options :host => "example.com"
+  
+  namespace :admin do
+    root :to => "base#index"
+    resources :users
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
