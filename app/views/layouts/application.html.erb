@@ -14,28 +14,43 @@
 </head>
 <body>
 
-<% flash.each do |key, value| %>
-  <div class='flash' id='<%= key %>'>
-  <%= value %>
-  c </div>
-<% end %>
-  
-<h1><%= link_to "Ticketee", root_path %></h1>  
-<%= yield %>
 
-<nav>
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>
-    <%= link_to "Sign out", destroy_user_session_path, :method =>
-:delete %>
-  <% else %>
-    <%= link_to "Sign in", new_user_session_path %> | 
-    <%= link_to "Sign up", new_user_registration_path %>
-  <% end %>
-  <%= admins_only do %>
-    <%= link_to "Admin", admin_root_path %><br>
-  <% end %>
-</nav>
+
+</body>
+
+<body>
+
+	<div id="contenido"> 
+
+		<div id="header"> <img src="/images/header.jpg" alt="" /> </div>
+		<div id="main">
+			<div id="info"> 
+                                <% flash.each do |key, value| %>
+                                  <div class='flash' id='<%= key %>'>
+                                    <%= value %>
+                                  </div>
+                                <% end %>
+
+                                <%= link_to image_tag('/images/title.jpg'), root_path %> 
+                                <%= yield %>
+                                
+                                <nav>
+                                  <% if user_signed_in? %>
+                                    Signed in as <%= current_user.email %>
+                                    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+                                  <% else %>
+                                    <%= link_to "Sign in", new_user_session_path %> | 
+                                    <%= link_to "Sign up", new_user_registration_path %>
+                                  <% end %>
+                                  <%= admins_only do %>
+                                    <%= link_to "Admin", admin_root_path %><br>
+                                  <% end %>
+                                </nav>  
+                        </div>
+
+		</div>
+	
+	</div>
 
 </body>
 </html>

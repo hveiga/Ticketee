@@ -1,7 +1,110 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
-*/
+body {
+margin: 0px;
+background-color: #5C8EBA;
+}
+
+
+#contenedor1 {
+z-index:1;
+position: absolute;
+width: 100%;
+height: 100%;
+text-align: center;
+vertical-align: middle;
+display:table-cell;
+}
+
+
+
+#contenedor2 {
+z-index:0;
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
+
+
+#header {
+margin: auto;
+text-align: right;
+width: 100%;
+height: 40px;
+position: relative;
+}
+
+
+#contenido {
+margin: auto;
+position: absolute;
+top: 10px;
+left: 50%;
+margin-left:-500px;
+width:1000px;
+min-height:85%;
+margin-bottom: 2px;
+}
+
+#main {
+margin: auto;
+position: absolute;
+width:1000px;
+min-height: 100%;
+border: 6px #4C759B solid;
+background-color: #FFFFFF;
+}
+
+#info {
+margin: auto;
+position: relative;
+width: 960px;
+height: 90%;
+border: 0px #4C759B solid;
+background-color: #FFFFFF;
+float: right;
+padding: 10px;
+font-family: helvetica;
+}
+
+.centrar {
+margin-right:auto; 
+margin-left:auto; 
+text-align:center;
+display: block;
+}
+
+.letra {
+font-family: verdana;
+color: #AEAEAE;
+}
+
+.letra2 {
+font-family: verdana;
+font-size: 11px;
+color: #AEAEAE;
+}
+
+.form {
+border: 1px #AEAEAE solid;
+width: 150px;
+}
+
+.form2 {
+font-family:  verdana;
+font-size: 11px;
+}
+
+.form3 {
+font-family: verdana;
+font-size: 18px; 
+}
+
+.articles_show {
+    margin: auto;
+    width: 95%;
+    padding: 2px;
+}
+
+td, th { 
+    border: 1px #D2D2D2 solid;
+}
